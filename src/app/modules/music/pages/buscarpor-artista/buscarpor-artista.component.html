@@ -1,0 +1,29 @@
+<app-top-bar></app-top-bar>
+<div class="buscar-por-artista-container">
+  <div class="encabezado-container">
+    <div class="title">
+      <h1>Buscar por Artista
+        <div *ngIf="!artistForm.invalid">
+          <span id="userwriteen">{{artistForm.value.artistName}}</span>
+        </div>
+      </h1>
+    </div>
+    <div class="formulario-container">
+      <form action="" id="form-principal" [formGroup]="artistForm" (ngSubmit)="loadDataApi()">
+        <input type="text" id="search-input" name="search" placeholder="artist or musical group" formControlName="artistName">
+        <button type="submit" id="submit"><i class="fa fa-search" aria-hidden="true"></i> search</button>
+      </form>
+    </div>
+  </div>
+  <div class="container-songs" *ngIf="show">
+    <div *ngFor="let datum of arregloDatum">
+      <app-item-artista [itemtitle]="datum.title"
+                        [artistPicture]="datum.artist.picture_medium"
+                        [albumTitle]="datum.album.title"
+                        [artistName]="datum.artist.name"
+                        [duration]="datum.duration"
+                        [trackmp3]="datum.preview"
+      ></app-item-artista>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+.container-alfabeto{
+  width: 80%;
+  // background-color: rgb(255, 0, 55);
+  margin: 0 auto;
+}
+.container-lyrics{
+  width: 100%;
+  height: 30px;
+}
+.letter{
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+.letter button{
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background-color:  	rgb(92, 184, 92);
+  color: rgb(247, 247, 247);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.container-songs{
+  width: 100%; /*el padre tiene 80%*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+#sindatos p{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'examen_angular_castillo';
+  title = 'estructura2lazyload';
 }

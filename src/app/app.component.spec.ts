@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'examen_angular_castillo'`, () => {
+  it(`should have as title 'estructura2lazyload'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('examen_angular_castillo');
+    expect(app.title).toEqual('estructura2lazyload');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('examen_angular_castillo app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('estructura2lazyload app is running!');
   });
 });

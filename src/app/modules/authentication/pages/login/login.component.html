@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+<div class="container">
+  <div class="title">
+    <h2>Sign In
+    </h2>
+  </div>
+  <div class="logo"></div>
+  <div class="form">
+    <form action="" [formGroup]="myformLogin" (ngSubmit)="send()">
+      <label for="user">Usuario</label>
+      <input type="text" id="usuario" name="usuario" placeholder="username" formControlName="usuario"/>
+      <label for="passwd">Clave</label>
+      <input type="password" name="clave" placeholder="password" formControlName="clave" />
+      <div *ngIf="myformLogin.invalid && myformLogin.touched" class="showmsg">
+        <p>*password must be at least 3 and max 12 characters long </p>
+        <p>*both fields are required</p>
+      </div>
+      <div id="cajaboton">
+        <button id="submit" type="submit" >Sign In <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </button> <!--[disabled]="myformLogin.invalid"-->
+      </div>
+    </form>
+  </div>
+
+</div>
+<!--la asignacion de lo que contiene formControlName debe ser igual al que esta definido en fb.group({});-->

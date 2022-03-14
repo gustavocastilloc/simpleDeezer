@@ -1,0 +1,33 @@
+<app-top-bar></app-top-bar>
+<div class="container-alfabeto">
+  <div class="title">
+    <h1>Buscador Por Letras</h1>
+  </div>
+  <div class="container-lyrics">
+    <div class="letter" *ngFor="let letra of letras">
+      <button (click)="showBox(letra)" >{{letra}}</button>
+    </div>
+  </div>
+  <div class="container-songs" *ngIf="mostrar">
+    <div *ngFor="let datum of arregloDatum">
+      <app-item-artista [itemtitle]="datum.title"
+                        [artistPicture]="datum.artist.picture_medium"
+                        [albumTitle]="datum.album.title"
+                        [artistName]="datum.artist.name"
+                        [duration]="datum.duration"
+                        [trackmp3]="datum.preview"
+      ></app-item-artista>
+    </div>
+  </div>
+  <div id="sindatos" *ngIf="!mostrar">
+    <p>No hay datos para mostrar</p>
+  </div>
+</div>
+<!-- datum es el elemento tipo Datum segun la interfaz  -->
+<!-- <span>{{datum.preview}}</span> -->
+<!--  -->
+<!--
+<span>{{datum.artist.picture_medium}}</span>
+<span>{{datum.title}}</span>
+<span>{{datum.album.title}}</span>
+<span>{{datum.artist.name}}</span> <span>{{datum.duration}}</span> -->
